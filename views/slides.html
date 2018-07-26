@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Supercharge your debugging experience.</title>
+    <meta name="description" content="Supercharge your debugging experience, a talk on webpage debugging using chrome devtools">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/white.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+  <div class="slides">
+    <section class="main-title">
+      🔋
+      <p>
+        <code>Supercharge your debugging experience</code>
+      </p>
+    </section>
+    <section>
+      <section>
+        <h1>Why talk about devtools!</h1>
+      </section>
+      <section>
+        <section>
+          <h3>alerts, console logs, etc..</h3>
+        </section>
+        <br><br>
+        <section class="fragment fade-in bg-black">
+          <p>In real world, we spend a higher percentage of time in reading and debugging code.</p>
+          <p>Efficient use of devtools can help with debugging and boost productivity</p>
+        </section>
+      </section>
+    </section>
+    <section>
+      <ul class="no-style-list">
+        <li>👣 <span class="px-10">Walkthrough</span></li>
+        <li>🧟‍♂️<span class="px-10">Demos</span></li>
+      </ul>
+    </section>
+    <section>
+      <section>
+        <h1 class="bg-black">Sources Panel</h1>
+      </section>
+      <section data-autoslide="600">
+        <ul class="no-style-list sources">
+          <li class="fragment">‼️ Breakpoints</li>
+          <li class="fragment">🏷️ Modifying variables in scope</li>
+          <li class="fragment">🎰 The call stack</li>
+          <li class="fragment">⏰ Watch expressions</li>
+          <li class="fragment">🌀 Restart frame</li>
+          <li class="fragment">⚰️ Blackbox script</li>
+          <li class="fragment" data-autoslide="50000">☢️ Force script execution</li>
+        </ul>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h1 class="bg-red">Overrides</h1>
+      </section>
+      <section>
+        <h2>Persist changes</h2>
+        <small class="fragment">even after reload!</small>
+        <section class="fragment">
+          <p><span class="px-10 bg-red">CSS</span></p>
+          <p><span class="px-10 bg-yellow">Javascript</span></p>
+          <p><span class="px-10 bg-blue">Images</span></p>  
+        </section>
+      </section>
+    </section>
+    <section>
+      <h1 class="bg-green">Snippets</h1>
+      <small>automate the boring stuff.</small>
+    </section>
+    <section>
+      <h1 class="bg-blue">Request blocking</h1>
+      <small>blocking unwanted requests.</small>
+    </section>
+    <section>
+      <h1 class="bg-dark-green">Code coverage</h1>
+      <small>find unused css and js.</small>
+    </section>
+    <section>
+      <section>
+        <h1 class="bg-black">Console</h1>
+      </section>
+      <section>
+        <h2>Logging</h2>
+        <table>
+          <tr>
+            <td class="fragment bg-black">log</td>
+            <td class="fragment bg-blue">info</td>
+            <td class="fragment bg-yellow">warn</td>
+            <td class="fragment bg-red">error</td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        trivia! what does <span class="bg-black px-10">console.debug()</span> do ?
+      </section>
+      <section>
+        <p class="text-xl"><span class="bg-green px-10">console.group</span></p>
+        <p class="text-xl"><span class="bg-dark-green px-10">console.groupCollapsed</span></p>
+        <br>
+        <small>grouping stuff.</small>
+      </section>
+      <section>
+        <p>
+          <span class="text-xl bg-black px-10">console.clear</span>
+        </p>
+        <small>clearing stuff.</small>
+      </section>
+      <section>
+        <p><span class="text-xl bg-black px-10">console.table</span></p>
+        <small>print object as table, works for both object and arrays</small>
+      </section>
+      <section>
+        <span class="text-xl bg-black px-10">console.assert</span>
+      </section>
+      <section>
+        <p><span class="text-xl bg-black px-10">console.style</span></p>
+        <small>styling console messages.</small>
+      </section>
+      <section>
+        <p> <span class="text-xl bg-black px-10">copy</span></p>
+        <small>copy value to clipboard.</small>
+      </section>
+      <section>
+        <p><span class="text-xl bg-black px-10">$</span></p>
+        <table>
+          <tr></tr>
+          <tr>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td>$_</td>
+          </tr>
+          <tr></tr>
+        </table>
+        <br>
+        <small>query, current element and last result</small>
+      </section>
+    </section>
+    <section>
+      <p>
+        explore more on devtools
+      </p>
+      <ul class="no-style-list">
+        <li><a href="https://developers.google.com/web/tools/chrome-devtools/">Google Chrome - Devtools</a></li>
+        <li><a href="https://umaar.com/dev-tips/">Umar Hansa - Dev tips</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Thank You</h2>
+      <svg viewbox="328 355 335 276" xmlns="http://www.w3.org/2000/svg">
+  <path d="
+    M 630, 425
+    A 195, 195 0 0 1 331, 600
+    A 142, 142 0 0 0 428, 570
+    A  70,  70 0 0 1 370, 523
+    A  70,  70 0 0 0 401, 521
+    A  70,  70 0 0 1 344, 455
+    A  70,  70 0 0 0 372, 460
+    A  70,  70 0 0 1 354, 370
+    A 195, 195 0 0 0 495, 442
+    A  67,  67 0 0 1 611, 380
+    A 117, 117 0 0 0 654, 363
+    A  65,  65 0 0 1 623, 401
+    A 117, 117 0 0 0 662, 390
+    A  65,  65 0 0 1 630, 425
+    Z"
+    style="fill:#3BA9EE;"/>
+</svg>
+      <p>@irvisharma</p>
+    </section>
+  </div>
+</div>
+  <!--   Initialize    -->
+    <script>
+			Reveal.initialize({
+			  controlsLayout: 'edges',
+			});
+		</script>
+  </body>
+</html>

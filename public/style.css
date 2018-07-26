@@ -1,0 +1,61 @@
+/* SLIDES STYLES */
+.main-title{
+  font-size: 100px !important;
+}
+
+.px-10{
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.bg-blue{
+  background-color: #2962FF;
+  color: #fff !important;
+}
+
+.bg-black{
+  background-color: #263238;
+  color: #fff !important;
+}
+
+.bg-yellow{
+  background-color: #FDD835;
+  color: #000 !important;
+}
+
+.bg-red{
+  background-color: #F44336;
+  color: #fff !important;
+}
+
+.bg-green{
+  background-color: #00695C;
+  color: #fff !important;
+}
+.bg-dark-green{
+  background-color: #004D40;
+  color: #fff !important;
+}
+
+.text-xl{
+  font-size: 70px !important;
+  font-weight: bold !important;
+}
+
+svg {
+  display: block;
+  height: 70px;
+  margin: 0 auto 20px;
+}
+
+.no-style-list{
+  margin: 0 !important;
+}
+
+.no-style-list li{
+  list-style: none;
+}
+
+.sources li{
+  padding: 10px;
+}
