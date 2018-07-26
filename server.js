@@ -16,11 +16,7 @@ app.get('/', function(request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-app.get('/slides', function(request, response) {
-  response.sendFile(__dirname + '/views/slides.html');
-});
-
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function() {
+var listener = app.listen(process.env.PORT || 1234, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });

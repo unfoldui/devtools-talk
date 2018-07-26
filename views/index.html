@@ -1,33 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Supercharge your debugging experience.</title>
-    <meta name="description" content="Supercharge your debugging experience, a talk on webpage debugging using chrome devtools">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">’
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/client.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <h1>
-        🔋Supercharge your debugging experience
-      </h1>
-    </header>
-    <main>      
-      <video
-        type="video/mov"
-        loop
-        autoplay
-        width="400"
-        controls
-        src="https://cdn.glitch.com/ffac3492-1229-4c83-ad29-1b98ca47bffe%2Fwarn-video.mov?1532612466277" />
-    </main>
-  </body>
+<head>
+  <title>Supercharge your debugging experience.</title>
+  <meta name="description" content="Supercharge your debugging experience, a talk on webpage debugging using chrome devtools">
+  <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/reveal/reveal.css">
+  <link rel="stylesheet" href="/reveal/white.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class="main-title">
+        🔋
+        <p>
+          <code>Supercharge your debugging experience</code>
+        </p>
+      </section>
+      <section>
+        <section>
+          <h1>Why talk about devtools!</h1>
+        </section>
+        <section>
+          <section>
+            <h3>alerts, console logs, etc..</h3>
+          </section>
+          <br>
+          <br>
+          <section class="fragment fade-in bg-black text-white">
+            <p>In real world, we spend a higher percentage of time in reading and debugging code.</p>
+            <p>Efficient use of devtools can help with debugging and boost productivity</p>
+          </section>
+        </section>
+      </section>
+      <section>
+        <ul class="no-style-list">
+          <li>👣
+            <span class="px-10">Walkthrough</span>
+          </li>
+          <li>🧟‍♂️
+            <span class="px-10">Demos</span>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <section>
+          <h1 class="bg-black text-white">Sources Panel</h1>
+        </section>
+        <section data-autoslide="600">
+          <ul class="no-style-list sources">
+            <li class="fragment">‼️ Breakpoints</li>
+            <li class="fragment">🏷️ Modifying variables in scope</li>
+            <li class="fragment">🎰 The call stack</li>
+            <li class="fragment">⏰ Watch expressions</li>
+            <li class="fragment">🌀 Restart frame</li>
+            <li class="fragment">⚰️ Blackbox script</li>
+            <li class="fragment" data-autoslide="50000">☢️ Force script execution</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h1 class="bg-red text-white">Overrides</h1>
+        </section>
+        <section>
+          <h2>Persist changes</h2>
+          <section class="fragment">
+            <p>
+              <span class="px-10 text-white bg-red">CSS</span>
+            </p>
+            <p>
+              <span class="px-10 bg-yellow">Javascript</span>
+            </p>
+            <p>
+              <span class="px-10 text-white bg-blue">Images</span>
+            </p>
+            <p>
+              <table>
+                <tr>
+                  <td>
+                    
+                  </td>
+                </tr>
+              </table>
+            </p>
+          </section>
+        </section>
+      </section>
+      <section>
+        <h1 class="text-white bg-green">Snippets</h1>
+        <small>automate the boring stuff.</small>
+      </section>
+      <section>
+        <h1 class="text-white bg-blue">Request blocking</h1>
+        <small>blocking unwanted requests.</small>
+      </section>
+      <section>
+        <h1 class="text-white bg-dark-green">Code coverage</h1>
+        <small>find unused css and js.</small>
+      </section>
+      <section>
+        <section>
+          <h1 class="text-white bg-black">Console</h1>
+        </section>
+        <section>
+          <h2>Logging</h2>
+          <table>
+            <tr>
+              <td class="fragment text-white bg-black pointer" onclick="consoleLog()">log</td>
+              <td class="fragment text-white bg-blue pointer" onclick="consoleInfo()">info</td>
+              <td class="fragment bg-yellow pointer" onclick="consoleWarn()">warn</td>
+              <td class="fragment text-white bg-red pointer" onclick="consoleError()">error</td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          trivia! what does
+          <span class="text-white bg-black px-10">console.debug()</span> do ?
+        </section>
+        <section>
+          <p class="text-xl">
+            <span class="text-white bg-green px-10 pointer" onclick="logListOfHeroesGrouped()">console.group</span>
+          </p>
+          <p class="text-xl">
+            <span class="text-white bg-dark-green px-10 pointer" onclick="logListOfHeroesGroupedCollapsed()">console.groupCollapsed</span>
+          </p>
+          <br>
+          <small class="pointer" onclick="logListOfHeroes()">grouping stuff.</small>
+        </section>
+        <section>
+          <p>
+            <span class="text-xl text-white bg-black px-10 pointer" onclick="consoleClear()">console.clear</span>
+          </p>
+          <small>clearing stuff.</small>
+        </section>
+        <section>
+          <p>
+            <span class="text-xl text-white bg-black px-10">console.table</span>
+          </p>
+          <small>print object as table, works for both
+            <span class="bg-yellow px-10 pointer" onclick="consoleTableObject()">object</span>
+            and
+            <span class="bg-yellow px-10 pointer" onclick="consoleTableArray()">arrays</span>
+          </small>
+        </section>
+        <section>
+          <span class="text-xl text-white bg-black px-10">console.assert</span>
+          <p>
+            <span class="pointer text-white bg-green px-10" onclick="consoleAssertTrue()">1 == 1</span>
+            <span class="pointer text-white bg-red px-10" onclick="consoleAssertFalse()">2 == 3</span>
+          </p>
+        </section>
+        <section>
+          <p>
+            <span class="text-xl text-white bg-black px-10 pointer" onclick="consoleStyle()">style</span>
+          </p>
+          <small>
+            <span class="pointer text-white bg-blue px-10" onclick="consoleStyleCrazy()">styling</span>
+            console messages.
+          </small>
+        </section>
+        <section>
+          <p>
+            <span class="text-xl text-white bg-black px-10">copy</span>
+          </p>
+          <small>copy value to clipboard.</small>
+        </section>
+        <section>
+          <p>
+            <span class="text-xl text-white bg-black px-10">$</span>
+          </p>
+          <table>
+            <tr></tr>
+            <tr>
+              <td>$0</td>
+            </tr>
+            <tr>
+              <td>$_</td>
+            </tr>
+            <tr></tr>
+          </table>
+          <br>
+          <small>query, current element and last result</small>
+        </section>
+      </section>
+      <section>
+        <p>
+          explore more on devtools
+        </p>
+        <ul class="no-style-list">
+          <li>
+            <a href="https://developers.google.com/web/tools/chrome-devtools/">Google Chrome - Devtools</a>
+          </li>
+          <li>
+            <a href="https://umaar.com/dev-tips/">Umar Hansa - Dev tips</a>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Thank You</h2>
+        <svg viewbox="328 355 335 276" xmlns="http://www.w3.org/2000/svg">
+          <path d="
+    M 630, 425
+    A 195, 195 0 0 1 331, 600
+    A 142, 142 0 0 0 428, 570
+    A  70,  70 0 0 1 370, 523
+    A  70,  70 0 0 0 401, 521
+    A  70,  70 0 0 1 344, 455
+    A  70,  70 0 0 0 372, 460
+    A  70,  70 0 0 1 354, 370
+    A 195, 195 0 0 0 495, 442
+    A  67,  67 0 0 1 611, 380
+    A 117, 117 0 0 0 654, 363
+    A  65,  65 0 0 1 623, 401
+    A 117, 117 0 0 0 662, 390
+    A  65,  65 0 0 1 630, 425
+    Z" style="fill:#3BA9EE;" />
+        </svg>
+        <p>@irvisharma</p>
+      </section>
+    </div>
+  </div>
+  <script src="/reveal/reveal.js"></script>
+  <script> 
+    Reveal.initialize();
+  </script>
+  <script src="/debug.js"></script>
+  <script src="/console.js"></script>
+</body>
+
 </html>
