@@ -1,43 +1,41 @@
-/* SLIDES STYLES */
-.main-title{
+.main-title {
   font-size: 100px !important;
 }
 
-.px-10{
+.px-10 {
   padding-left: 15px !important;
   padding-right: 15px !important;
 }
 
-.bg-blue{
-  background-color: #2962FF;
+.text-white{
   color: #fff !important;
 }
 
-.bg-black{
+.bg-blue {
+  background-color: #2962ff;
+}
+
+.bg-black {
   background-color: #263238;
-  color: #fff !important;
 }
 
-.bg-yellow{
-  background-color: #FDD835;
-  color: #000 !important;
+.bg-yellow {
+  background-color: #fdd835;
+  color: #000;
 }
 
-.bg-red{
-  background-color: #F44336;
-  color: #fff !important;
+.bg-red {
+  background-color: #f44336;
 }
 
-.bg-green{
-  background-color: #00695C;
-  color: #fff !important;
+.bg-green {
+  background-color: #00695c;
 }
-.bg-dark-green{
-  background-color: #004D40;
-  color: #fff !important;
+.bg-dark-green {
+  background-color: #004d40;
 }
 
-.text-xl{
+.text-xl {
   font-size: 70px !important;
   font-weight: bold !important;
 }
@@ -48,14 +46,18 @@ svg {
   margin: 0 auto 20px;
 }
 
-.no-style-list{
+.no-style-list {
   margin: 0 !important;
 }
 
-.no-style-list li{
+.no-style-list li {
   list-style: none;
 }
 
-.sources li{
+.sources li {
   padding: 10px;
+}
+
+.pointer {
+  cursor: pointer !important;
 }
