@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/reveal/reveal.css">
   <link rel="stylesheet" href="/reveal/white.css">
+  <link rel="stylesheet" href="/lib/css/zenburn.css" async=true>
   <link rel="stylesheet" href="/style.css">
 </head>
 
@@ -28,13 +29,13 @@
         </section>
         <section>
           <section>
-            <h3>alerts, console logs, etc..</h3>
+            <p>alerts, console logs, etc..</h3>
           </section>
           <br>
           <br>
-          <section class="fragment fade-in bg-black text-white">
-            <p>In real world, we spend a higher percentage of time in reading and debugging code.</p>
-            <p>Efficient use of devtools can help with debugging and boost productivity</p>
+          <section class="bg-black text-white">
+            <p class="fragment fade-in">In real world, we spend a higher percentage of time in reading and debugging code.</p>
+            <p class="fragment fade-in">Efficient use of devtools can help with debugging and boost productivity</p>
           </section>
         </section>
       </section>
@@ -84,7 +85,7 @@
               <table>
                 <tr>
                   <td>
-                    
+
                   </td>
                 </tr>
               </table>
@@ -93,8 +94,151 @@
         </section>
       </section>
       <section>
-        <h1 class="text-white bg-green">Snippets</h1>
-        <small>automate the boring stuff.</small>
+        <section>
+          <h1 class="text-white bg-green">Snippets</h1>
+          <small>automate the boring stuff.</small>
+        </section>
+        <section>
+          <div class="form-container">
+            <form id="form1" class="step-form active">
+              <h3>Personal Details</h3>
+              <p>
+                <label>
+                  <span>First Name</span>
+                  <input type="text" name="firstname" required>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <span>Last Name</span>
+                  <input type="text" name="lastname" required>
+                </label>
+              </p>
+              <button>Submit</button>
+            </form>
+
+            <form id="form2" class="step-form">
+              <h3>Work Details</h3>
+              <p>
+                <label>
+                  <span>Organization</span>
+                  <input type="text" name="organization" required>
+                </label>
+              </p>
+              <button>Submit</button>
+            </form>
+
+            <form id="form3" class="step-form">
+              <h3>Contact Details</h3>
+              <p>
+                <label>
+                  <span>Phone</span>
+                  <input type="number" name="phone" required>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <span>Email</span>
+                  <input type="text" name="email" required>
+                </label>
+              </p>
+              <button>Submit</button>
+            </form>
+            <section id="success" class="hidden">
+              <p class="text-xl">You're all set!</p>
+              <p>
+                <button onclick="resetForm()">Reset</button>
+              </p>
+            </section>
+          </div>
+        </section>
+        <section>
+          <pre><code data-trim data-noescape>
+                (()=> {
+
+                  let delay = 500;
+                  const increaseDelay = () => delay += 500;
+              
+                  <mark>let form1 = $('#form1');</mark>
+              
+                  setTimeout(()=>{
+                      <mark>form1.firstname.value = 'Ravi';</mark>
+                  }, delay)
+              
+                  increaseDelay()
+              
+                  setTimeout(()=>{
+                      <mark>form1.lastname.value = 'Sharma';</mark>
+                  }, delay)
+              
+                  increaseDelay()
+              
+                  setTimeout(()=>{
+                      <mark>form1.querySelector('button').click()</mark>
+                  }, delay)  
+              
+                  increaseDelay()
+              
+              /////////////////////////////////////////
+              
+                  <mark>let form2 = $('#form2');</mark>
+              
+                  setTimeout(()=>{
+                      <mark>form2.organization.value = 'TW';</mark>    
+                  }, delay)
+              
+                  increaseDelay()
+              
+                  setTimeout(()=>{
+                      <mark>form2.querySelector('button').click()</mark>
+                  }, delay)  
+              
+                  increaseDelay()
+              
+              
+              /////////////////////////////////////
+              
+                  <mark>let form3 = $('#form3');</mark>
+              
+                  setTimeout(()=>{
+                      <mark>form3.phone.value = 98765;</mark>
+                  }, delay)
+              
+                  increaseDelay()
+              
+                  setTimeout(()=>{
+                      <mark>form3.email.value = 'rvi@example.com';</mark>
+                  }, delay)  
+              
+                  increaseDelay()
+              
+                  setTimeout(()=>{
+                      <mark>form3.querySelector('button').click()</mark>
+                  }, delay)  
+              
+                  increaseDelay()
+              })()
+            </code></pre>
+        </section>
+        <section>
+          <pre><code  data-trim data-noescape>
+              (()=> {
+                let form1 = $('#form1');
+                form1.firstname.value = 'Ravi';    
+                form1.lastname.value = 'Sharma';
+                form1.querySelector('button').click()
+
+                let form2 = $('#form2');
+                form2.organization.value = 'TW';    
+                form2.querySelector('button').click()
+
+                let form3 = $('#form3');
+                form3.phone.value = 98765;
+                form3.email.value = 'rvi@example.com';
+                form3.querySelector('button').click();
+            })()
+          </code></pre>
+        </section>
       </section>
       <section>
         <h1 class="text-white bg-blue">Request blocking</h1>
@@ -227,8 +371,10 @@
     </div>
   </div>
   <script src="/reveal/reveal.js"></script>
+  <script src="/reveal/plugin/highlight/highlight.js"></script>
   <script> 
     Reveal.initialize();
+    hljs.initHighlighting();
   </script>
   <script src="/debug.js"></script>
   <script src="/console.js"></script>
