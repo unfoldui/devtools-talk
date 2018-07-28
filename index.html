@@ -125,7 +125,7 @@
                   <input type="text" name="lastname" autocomplete="false" required>
                 </label>
               </p>
-              <button>Submit</button>
+              <button class="submit-btn">Submit</button>
             </form>
 
             <form id="form2" class="step-form">
@@ -136,7 +136,7 @@
                   <input type="text" name="organization" autocomplete="false" required>
                 </label>
               </p>
-              <button>Submit</button>
+              <button class="submit-btn">Submit</button>
             </form>
 
             <form id="form3" class="step-form">
@@ -144,23 +144,21 @@
               <p>
                 <label>
                   <span>Phone</span>
-                  <input type="number" name="phone" autocomplete="false" required>
+                  <input type="tel" name="phone" autocomplete="false" required>
                 </label>
               </p>
               <p>
                 <label>
                   <span>Email</span>
-                  <input type="text" name="email" autocomplete="false" required>
+                  <input type="email" name="email" autocomplete="false" required>
                 </label>
               </p>
-              <button>Submit</button>
+              <button class="submit-btn">Submit</button>
             </form>
-            <section id="success" class="hidden">
-              <p class="text-xl">You're all set!</p>
-              <p>
-                <button onclick="resetForm()">Reset</button>
-              </p>
-            </section>
+            <form id="form4" class="step-form">
+              <p>You're all set!</p>
+              <button class="submit-btn">Reset</button>
+            </form>
           </div>
         </section>
         <section>

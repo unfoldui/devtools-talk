@@ -65,50 +65,102 @@ svg {
 
 /* SNIPPETS FORM */
 
+.form-container{
+  margin: 50px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  perspective: 2000px;
+}
+
 .step-form{
-  transition: opacity 0.2s,
-              transform 1s;
-  transition-timing-function: ease;
-  z-index: -1;
+  padding: 1em !important;
   position: absolute;
-  left: 25%;
-  opacity: 0;
-  margin: 0 auto !important;
+	width: 500px;
+  height: 400px;
+  box-shadow: 0 8px 10px -2px rgba(0,0,0,.2);
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 .step-form label{
-  display: inline-flex;
+	display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
 }
 
-.step-form button,
-#success button{
-  width: 200px;
-  height: 50px;
-  font-size: 0.7em;
-  background-color: #000;
-  color: white;
-  outline: none;
-  border-radius: 4px;
-  cursor: pointer;
+.step-form p{
+  width: 100%;
 }
 
 .step-form label input{
-  margin-left: 10px;
-  padding-left: 10px;
-  height: 50px;
-  width: 180px;
-  border: 2px solid #000;
-  border-radius: 4px;
-  font-size: 1em;
+  border-radius: 3px;
+  border: 1px solid #c5c5c5;
+  outline: none;
+  padding: 10px;
+  font-size: 1.6rem;
+}
+
+.step-form label span{
+  margin-right: 0.4em;
+}
+
+.step-form .submit-btn{
+  margin-top: auto;
+}
+
+.step-form button{
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .active{
-  z-index: 1;
-  opacity: 1;
+  display: flex;
 }
 
-.hidden{
-  display:none !important;
+@keyframes out{
+  0%{
+  	transform: rotate(0);
+    opacity: 1;
+  }
+  
+  100%{
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+}
+
+
+
+@keyframes in{
+  0%{
+    transform: rotate(-45deg);
+    opacity: 0;    
+  }
+  
+  100%{
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+.animate-out{
+	transform-origin: bottom right;
+  animation: out 450ms cubic-bezier(.39,-0.49,.53,.98) forwards;  
+  animation-delay: 150ms;
+}
+
+.animate-in{
+  opacity: 0;
+  transform-origin: bottom left;
+  animation: in 400ms ease-in-out forwards;
+  animation-delay: 400ms;
+  display:flex
 }

@@ -14,14 +14,24 @@ function callMe(){
 document.getElementById('form1').addEventListener('submit', form1Submitted)
 document.getElementById('form2').addEventListener('submit', form2Submitted)
 document.getElementById('form3').addEventListener('submit', form3Submitted)
+document.getElementById('form4').addEventListener('submit', form4Submitted)
 
 
-function switchToForm(from, to) {
-    const nextForm = document.getElementById(to);
+function switchToForm(from, to){
+  const currentElement =   document.getElementById(from)
+  const nextForm = document.getElementById(to);
+  const inputElm = nextForm.querySelector('input');
+  
+  currentElement.classList.add('animate-out');
+  nextForm.classList.add('animate-in');
+  inputElm && inputElm.focus();
+
+  // remove animate classes and previouosly active class
+  setTimeout(()=>{
     nextForm.classList.add('active');
-    nextForm.querySelector('input').focus();
-
-    document.getElementById(from).classList.remove('active');
+    nextForm.classList.remove('animate-in')
+    currentElement.classList.remove('active', 'animate-out');
+  }, 800);  
 }
 
 function form1Submitted(e){
@@ -34,14 +44,12 @@ function form2Submitted(e){
 }
 function form3Submitted(e){
   e.preventDefault();
-  document.getElementById('form3').classList.remove('active');
-  document.getElementById('success').classList.remove('hidden');
+  switchToForm('form3', 'form4');
 }
 
-function resetForm(){
-  ['form1', 'form2','form3'].forEach(form => document.getElementById(form).reset());
-  document.getElementById('form1').classList.add('active')
-  document.getElementById('form2').classList.remove('active')
-  document.getElementById('form3').classList.remove('active')
-  document.getElementById('success').classList.add('hidden');
+function form4Submitted(e){
+  e.preventDefault();
+  switchToForm('form4', 'form1');
+  ['form1', 'form2', 'form3']
+    .forEach(formId => document.getElementById(formId).reset());
 }
