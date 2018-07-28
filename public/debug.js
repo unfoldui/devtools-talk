@@ -39,6 +39,7 @@ function form3Submitted(e){
 }
 
 function resetForm(){
+  ['form1', 'form2','form3'].forEach(form => document.getElementById(form).reset());
   document.getElementById('form1').classList.add('active')
   document.getElementById('form2').classList.remove('active')
   document.getElementById('form3').classList.remove('active')
